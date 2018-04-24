@@ -30,7 +30,7 @@ const signUpFailure = function () {
 const signInSuccess = function (data) {
   $('#sign-message').removeClass()
   $('#sign-message').text('Successfully signed in')
-  $('#sign-forms').addClass('hidden')
+  $('#signForms').addClass('hidden')
   $('#sign-up').addClass('hidden')
   $('#sign-in').addClass('hidden')
   $('#pwAndSignOut').removeClass()
@@ -85,7 +85,8 @@ const changePasswordFailure = function () {
 const signOutSuccess = function () {
   $('#sign-message').removeClass()
   $('#sign-message').text('Successfully signed out')
-  $('#sign-forms').removeClass()
+  $('#sign-up').removeClass()
+  $('#sign-in').removeClass()
   $('#pwAndSignOut').addClass('hidden')
   store.user = null
 }

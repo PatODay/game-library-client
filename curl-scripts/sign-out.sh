@@ -1,4 +1,4 @@
-# ID=2 sh curl-scripts/sign-out.sh
+# sh curl-scripts/sign-out.sh
 
 curl "http://tic-tac-toe.wdibos.com/sign-out/${ID}" \
   --include \

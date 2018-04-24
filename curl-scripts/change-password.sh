@@ -1,4 +1,4 @@
-# ID=2 sh curl-scripts/change-password.sh
+# sh curl-scripts/change-password.sh
 
 curl "http://tic-tac-toe.wdibos.com/change-password/:id" \
   --include \
