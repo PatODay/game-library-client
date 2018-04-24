@@ -43,11 +43,25 @@ const onAddGame = function (event) {
     .catch(ui.addGameFailure)
 }
 
+const onGetGames = (event) => {
+  event.preventDefault()
+  api.getGames()
+    .then(ui.getGamesSuccess)
+    .catch(ui.failure)
+}
+
+const onClearGames = (event) => {
+  event.preventDefault()
+  ui.clearGames()
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#add-game').on('submit', onAddGame)
+  $('#getGamesButton').on('click', onGetGames)
+  $('#clearGamesButton').on('click', onClearGames)
   $('#sign-out').on('click', onSignOut)
 }
 

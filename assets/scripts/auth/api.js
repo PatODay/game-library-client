@@ -61,6 +61,17 @@ const addGame = function (data) {
   })
 }
 
+const getGames = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'GET',
+    headers: {
+      // contentType: 'application/json',
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
+
 const editGame = function () {
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
@@ -78,5 +89,6 @@ module.exports = {
   changePassword,
   signOut,
   addGame,
+  getGames,
   editGame
 }

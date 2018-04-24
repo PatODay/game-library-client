@@ -1,8 +1,14 @@
 {{#each games as |game|}}
 
- <!-- Developers, why are we using data-id and not just id? -->
  <ul>
-  <h1 data-id="{{game.id}}"> <small>Title: {{game.title}}</small></h1>
+  <h1 data-id="{{game.id}}"> <small>{{game.title}}</small></h1>
+  <!-- <div>
+    {{#if game.title}}
+      {{game.title}}
+    {{else}}
+      No title provided.
+    {{/if}}
+  </div> -->
  </ul>
 
 {{/each}}
