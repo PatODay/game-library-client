@@ -2,7 +2,7 @@
 
 let apiUrl
 const apiUrls = {
-  production: 'https://hidden-beach-83353.herokuapp.com/',
+  production: 'https://games-library-api.herokuapp.com/',
   development: 'http://localhost:4741'
 }
 

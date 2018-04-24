@@ -31,7 +31,10 @@ const signInSuccess = function (data) {
   $('#sign-message').removeClass()
   $('#sign-message').text('Successfully signed in')
   $('#sign-forms').addClass('hidden')
+  $('#sign-up').addClass('hidden')
+  $('#sign-in').addClass('hidden')
   $('#pwAndSignOut').removeClass()
+  $('#sign-out').removeClass()
   $('input[type=text]').val('')
   $('input[type=password]').val('')
   setTimeout(() => {
@@ -39,6 +42,7 @@ const signInSuccess = function (data) {
     $('#sign-message').addClass('hidden')
   }, 3000
   )
+  console.log('store is', store)
   store.user = data.user
 }
 
