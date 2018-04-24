@@ -35,10 +35,19 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+const onAddGame = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.addGame(data)
+    .then(ui.addGameSuccess)
+    .catch(ui.addGameFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
+  $('#add-game').on('submit', onAddGame)
   $('#sign-out').on('click', onSignOut)
 }
 

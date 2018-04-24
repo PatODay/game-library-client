@@ -35,6 +35,7 @@ const signInSuccess = function (data) {
   $('#sign-in').addClass('hidden')
   $('#pwAndSignOut').removeClass()
   $('#sign-out').removeClass()
+  $('#show-games').removeClass()
   $('input[type=text]').val('')
   $('input[type=password]').val('')
   setTimeout(() => {
@@ -88,7 +89,32 @@ const signOutSuccess = function () {
   $('#sign-up').removeClass()
   $('#sign-in').removeClass()
   $('#pwAndSignOut').addClass('hidden')
+  $('#show-games').addClass('hidden')
   store.user = null
+}
+
+const addGameSuccess = function () {
+  $('#sign-message').removeClass()
+  $('#sign-message').text('Successfully added game')
+  $('input[type=text]').val('')
+  $('input[type=password]').val('')
+  setTimeout(() => {
+    $('#sign-message').addClass('hidden')
+    $('#sign-message').text('')
+  }, 3000
+  )
+}
+
+const addGameFailure = function () {
+  $('#sign-message').removeClass()
+  $('#sign-message').text('Failed to add game')
+  $('input[type=text]').val('')
+  $('input[type=password]').val('')
+  setTimeout(() => {
+    $('#sign-message').addClass('hidden')
+    $('#sign-message').text('')
+  }, 3000
+  )
 }
 
 module.exports = {
@@ -98,5 +124,7 @@ module.exports = {
   signInFailure,
   changePasswordSuccess,
   changePasswordFailure,
-  signOutSuccess
+  signOutSuccess,
+  addGameSuccess,
+  addGameFailure
 }
