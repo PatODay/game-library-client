@@ -1,14 +1,14 @@
 {{#each games as |game|}}
 
- <ul>
-  <h1 data-id="{{game.id}}"> <small>{{game.title}}</small></h1>
-  <!-- <div>
-    {{#if game.title}}
-      {{game.title}}
+  <!-- <ul> -->
+  <h1 data-id="{{game.id}}" class="my-game"> <small>{{game.title}}</small></h1>
+  <ul data-id="{{game.id}}">
+    ID: {{#if game.id}}
+      {{game.id}}
     {{else}}
-      No title provided.
+      No ID provided.
     {{/if}}
-  </div> -->
- </ul>
+    <button type="submit">Remove Game</button>
+</ul>
 
 {{/each}}

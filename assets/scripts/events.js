@@ -55,6 +55,15 @@ const onClearGames = (event) => {
   ui.clearGames()
 }
 
+const onDeleteGame = (event) => {
+  event.preventDefault()
+  const gameId = $(event.target).closest('ul').attr('data-id')
+  console.log('delete data is', gameId)
+  api.deleteGame(gameId)
+    .then(ui.removeGameSuccess)
+    .catch(ui.removeGameFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
@@ -62,6 +71,7 @@ const addHandlers = () => {
   $('#add-game').on('submit', onAddGame)
   $('#getGamesButton').on('click', onGetGames)
   $('#clearGamesButton').on('click', onClearGames)
+  $('.content').on('click', 'button', onDeleteGame)
   $('#sign-out').on('click', onSignOut)
 }
 

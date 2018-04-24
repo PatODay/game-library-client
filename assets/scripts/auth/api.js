@@ -72,12 +72,12 @@ const getGames = function () {
   })
 }
 
-const editGame = function () {
+const deleteGame = (gameId) => {
   return $.ajax({
-    url: config.apiUrl + '/games/' + store.game.id,
-    method: 'PATCH',
+    url: config.apiUrl + '/games/' + gameId,
+    method: 'DELETE',
     headers: {
-      contentType: 'application/json',
+      // contentType: 'application/json',
       Authorization: `Token token=${store.user.token}`
     }
   })
@@ -90,5 +90,5 @@ module.exports = {
   signOut,
   addGame,
   getGames,
-  editGame
+  deleteGame
 }

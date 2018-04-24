@@ -91,6 +91,7 @@ const signOutSuccess = function () {
   $('#sign-in').removeClass()
   $('#pwAndSignOut').addClass('hidden')
   $('#show-games').addClass('hidden')
+  $('.content').empty()
   store.user = null
 }
 
@@ -121,11 +122,31 @@ const addGameFailure = function () {
 const getGamesSuccess = (data) => {
   console.log(data)
   const showGamesHtml = showGamesTemplate({ games: data.games })
-  $('.content').append(showGamesHtml)
+  $('.content').html(showGamesHtml)
 }
 
 const clearGames = () => {
   $('.content').empty()
+}
+
+const removeGameSuccess = () => {
+  $('#sign-message').removeClass()
+  $('#sign-message').text('Game Removed')
+  $('.content').empty()
+  setTimeout(() => {
+    $('#sign-message').addClass('hidden')
+    $('#sign-message').text('')
+  }, 3000
+  )
+}
+
+const removeGameFailure = () => {
+  $('#sign-message').text('Failed to remove game')
+  setTimeout(() => {
+    $('#sign-message').addClass('hidden')
+    $('#sign-message').text('')
+  }, 3000
+  )
 }
 
 module.exports = {
@@ -139,5 +160,7 @@ module.exports = {
   addGameSuccess,
   addGameFailure,
   getGamesSuccess,
-  clearGames
+  clearGames,
+  removeGameFailure,
+  removeGameSuccess
 }
