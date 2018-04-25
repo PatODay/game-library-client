@@ -34,12 +34,12 @@
     <button id="getGamesButton" class="btn btn-default">Get Games!</button>
     <button id="clearGamesButton" class="btn btn-default">Clear Games!</button>
     <form id="add-game">
-      <input type="text" name="game[title]" placeholder="Game Title">
+      <input required type="text" name="game[title]" placeholder="Game Title">
       <input type="submit" value="Add Game">
     </form>
     <form id="update-game">
-      <input type="number" name="game[id]" placeholder="ID of game to update">
-      <input type="text" name="game[title]" placeholder="Updated Game Title">
+      <input required type="number" name="game[id]" placeholder="ID of game to update">
+      <input required type="text" name="game[title]" placeholder="Updated Game Title">
       <input type="submit" value="Update Game">
     </form>
     <!-- <form id="delete-game">
