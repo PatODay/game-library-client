@@ -149,6 +149,9 @@ const getGamesSuccess = (data) => {
   console.log(data)
   const showGamesHtml = showGamesTemplate({ games: data.games })
   $('.content').html(showGamesHtml)
+  if (data.games.length === 0) {
+    $('.content').html('You dont seem to have any games, you should add some')
+  }
 }
 
 const clearGames = () => {
