@@ -119,6 +119,30 @@ const addGameFailure = function () {
   )
 }
 
+const updateGameSuccess = function () {
+  $('#sign-message').removeClass()
+  $('#sign-message').text('Successfully updated game')
+  $('input[type=text]').val('')
+  $('input[type=password]').val('')
+  setTimeout(() => {
+    $('#sign-message').addClass('hidden')
+    $('#sign-message').text('')
+  }, 3000
+  )
+}
+
+const updateGameFailure = function () {
+  $('#sign-message').removeClass()
+  $('#sign-message').text('Failed to update game')
+  $('input[type=text]').val('')
+  $('input[type=password]').val('')
+  setTimeout(() => {
+    $('#sign-message').addClass('hidden')
+    $('#sign-message').text('')
+  }, 3000
+  )
+}
+
 const getGamesSuccess = (data) => {
   console.log(data)
   const showGamesHtml = showGamesTemplate({ games: data.games })
@@ -162,5 +186,7 @@ module.exports = {
   getGamesSuccess,
   clearGames,
   removeGameFailure,
-  removeGameSuccess
+  removeGameSuccess,
+  updateGameSuccess,
+  updateGameFailure
 }

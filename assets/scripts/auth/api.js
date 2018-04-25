@@ -61,12 +61,12 @@ const addGame = function (data) {
   })
 }
 
-const getGames = function () {
+const getGames = function (data) {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'GET',
     headers: {
-      // contentType: 'application/json',
+      contentType: 'application/json',
       Authorization: `Token token=${store.user.token}`
     }
   })
@@ -83,6 +83,22 @@ const deleteGame = (gameId) => {
   })
 }
 
+const updateGame = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + data.game.id,
+    method: 'PATCH',
+    headers: {
+      contentType: 'application/json',
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: {
+      game: {
+        title: data.game.title
+      }
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
@@ -90,5 +106,6 @@ module.exports = {
   signOut,
   addGame,
   getGames,
-  deleteGame
+  deleteGame,
+  updateGame
 }
