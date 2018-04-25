@@ -49,7 +49,6 @@ const signOut = function () {
 }
 
 const addGame = function (data) {
-  console.log('add game data is', data)
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',

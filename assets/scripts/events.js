@@ -66,7 +66,6 @@ const onClearGames = (event) => {
 const onDeleteGame = (event) => {
   event.preventDefault()
   const gameId = $(event.target).closest('ul').attr('data-id')
-  console.log('delete data is', gameId)
   api.deleteGame(gameId)
     .then(ui.removeGameSuccess)
     .catch(ui.removeGameFailure)

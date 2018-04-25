@@ -44,7 +44,6 @@ const signInSuccess = function (data) {
     $('#sign-message').addClass('hidden')
   }, 3000
   )
-  console.log('store is', store)
   store.user = data.user
 }
 
@@ -147,7 +146,6 @@ const updateGameFailure = function () {
 }
 
 const getGamesSuccess = (data) => {
-  console.log(data)
   const showGamesHtml = showGamesTemplate({ games: data.games })
   $('.content').html(showGamesHtml)
   if (data.games.length === 0) {
