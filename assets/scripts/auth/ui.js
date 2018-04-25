@@ -122,8 +122,10 @@ const addGameFailure = function () {
 const updateGameSuccess = function () {
   $('#sign-message').removeClass()
   $('#sign-message').text('Successfully updated game')
+  $('.content').empty()
   $('input[type=text]').val('')
   $('input[type=password]').val('')
+  $('input[type=number]').val('')
   setTimeout(() => {
     $('#sign-message').addClass('hidden')
     $('#sign-message').text('')
