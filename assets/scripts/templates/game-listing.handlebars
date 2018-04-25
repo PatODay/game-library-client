@@ -3,6 +3,12 @@
   <!-- <ul> -->
   <h1 data-id="{{game.id}}" class="my-game"> <small>{{game.title}}</small></h1>
   <ul data-id="{{game.id}}">
+    Title: {{#if game.title}}
+      {{game.title}}
+    {{else}}
+      No title provided.
+    {{/if}}
+
     ID: {{#if game.id}}
       {{game.id}}
     {{else}}

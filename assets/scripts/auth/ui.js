@@ -92,6 +92,7 @@ const signOutSuccess = function () {
   $('#pwAndSignOut').addClass('hidden')
   $('#show-games').addClass('hidden')
   $('.content').empty()
+  document.getElementById('update-game').reset()
   store.user = null
 }
 
