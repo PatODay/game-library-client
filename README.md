@@ -29,7 +29,7 @@ This is my first full-stack project, and I wasn't sure what to expect. I came in
 
 # Wireframes
 
-[Wireframes](https://i.imgur.com/XWHdA4L.jpg)
+[Wireframes](https://i.imgur.com/qahEiUM.jpg)
 
 # User Stories
 1. User stories: As an unregistered user I would like to be able to sign up for an account
