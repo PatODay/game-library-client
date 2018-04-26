@@ -6,17 +6,17 @@ The Games Library app is designed to allow users to input games they own into a 
 
 # Technologies Used
 
-⋅⋅* JavaScript
-⋅⋅* jQuery
-⋅⋅* AJAX
-⋅⋅* HTML
-⋅⋅* GitHub
-⋅⋅* Atom
-⋅⋅* CSS/SASS
-⋅⋅* Bootstrap
-⋅⋅* Handlebars
-⋅⋅* Bash/Terminal
-⋅⋅* Google Chrome
+  * JavaScript
+  * jQuery
+  * AJAX
+  * HTML
+  * GitHub
+  * Atom
+  * CSS/SASS
+  * Bootstrap
+  * Handlebars
+  * Bash/Terminal
+  * Google Chrome
 
 # Games Library API Links
 
@@ -33,21 +33,21 @@ This is my first full-stack project, and I wasn't sure what to expect. I came in
 
 # User Stories
 1. User stories: As an unregistered user I would like to be able to sign up for an account
-  ⋅⋅* Once signed up I would like to be able to sign in to my account
-  ⋅⋅* Once signed in I would like the option to change my password
-  ⋅⋅* I want to be able to sign out of my account and none of my form data is retained by the page
+  * Once signed up I would like to be able to sign in to my account
+  * Once signed in I would like the option to change my password
+  * I want to be able to sign out of my account and none of my form data is retained by the page
 
 2. As a registered user I would like to be able to add games to the database
-  ⋅⋅* I want my games data accessible only to me (UPDATE/DELETE)
+  * I want my games data accessible only to me (UPDATE/DELETE)
 
 3. As a registered user I would like to be able to see what games I have within the database
-  ⋅⋅* I would like to be able to delete a game when the games index is returned to me
+  * I would like to be able to delete a game when the games index is returned to me
 
 4. As a registered user I would like to be able to update my games in the database
 
 # Future Iterations
 
 In the future, I will continue to work on styling, that aspect will be a continual work-in-progress. Other features I hope to add/incorporate in future iterations:
-  ⋅⋅* A join table to link games and users to consoles/platforms
-  ⋅⋅* Instead of entering form field data to edit a game, add a button to edit the text on return, similar to the delete function.
-  ⋅⋅* Incorporate 3rd party API's to track user game data, such as time played, trophies/achievements etc.
+  * A join table to link games and users to consoles/platforms
+  * Instead of entering form field data to edit a game, add a button to edit the text on return, similar to the delete function.
+  * Incorporate 3rd party API's to track user game data, such as time played, trophies/achievements etc.
