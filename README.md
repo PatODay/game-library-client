@@ -20,8 +20,8 @@ The Games Library app is designed to allow users to input games they own into a 
 
 # Games Library API Links
 
-[Games Library GitHub Repo](https://github.com/PatODay/games-library-api)
-[Games Library Heroku Page](https://games-library-api.herokuapp.com/)
+  * [Games Library GitHub Repo](https://github.com/PatODay/games-library-api)
+  * [Games Library Heroku Page](https://games-library-api.herokuapp.com/)
 
 # Development Process
 
