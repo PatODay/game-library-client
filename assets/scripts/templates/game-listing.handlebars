@@ -3,18 +3,22 @@
   <!-- <ul> -->
   <h1 data-id="{{game.id}}" class="my-game"> <small>{{game.title}}</small></h1>
   <ul data-id="{{game.id}}">
-    <li>Title: {{#if game.title}}
+    Title: {{#if game.title}}
       {{game.title}}
     {{else}}
       No title provided.
-    {{/if}}</li>
+    {{/if}}
 
-    <li>ID: {{#if game.id}}
+    <div></div>
+
+  ID: {{#if game.id}}
       {{game.id}}
     {{else}}
       No ID provided.
-    {{/if}}</li>
+    {{/if}}
+    <div>
     <button type="submit">Remove Game</button>
+    <div>
 </ul>
 
 {{/each}}
