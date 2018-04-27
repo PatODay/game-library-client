@@ -98,6 +98,7 @@ const signOutSuccess = function () {
 const addGameSuccess = function () {
   $('#sign-message').removeClass()
   $('#sign-message').text('Successfully added game')
+  $('.content').empty()
   $('input[type=text]').val('')
   $('input[type=password]').val('')
   setTimeout(() => {
