@@ -139,6 +139,7 @@ const updateGameFailure = function () {
   $('#sign-message').text('Failed to update game')
   $('input[type=text]').val('')
   $('input[type=password]').val('')
+  $('input[type=number]').val('')
   setTimeout(() => {
     $('#sign-message').addClass('hidden')
     $('#sign-message').text('')
