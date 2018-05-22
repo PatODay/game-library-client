@@ -12,8 +12,10 @@
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
+
 <body class="container">
-  <h2>Your Games Library</h2>
+  <h2 class="main-title">Your Games Library</h2>
+  <div class="background">
   <form id="sign-up">
     <input name="credentials[email]" type="text" placeholder="an@example.email">
     <input name="credentials[password]" type="password" placeholder="Password">
@@ -32,30 +34,31 @@
       <input type="submit" value="Change Password">
     </form>
     <div class="container-fluid">
-    <button id="getGamesButton" class="btn btn-default">Get Games!</button>
-    <button id="clearGamesButton" class="btn btn-default">Clear Games!</button>
-    <form id="add-game">
-      <input required type="text" name="game[title]" placeholder="Game Title">
-      <input type="submit" value="Add Game">
-    </form>
-    <form id="update-game">
-      <input required type="number" name="game[id]" placeholder="ID of game to update">
-      <input required type="text" name="game[title]" placeholder="Updated Game Title">
-      <input type="submit" value="Update Game">
-    </form>
-    <form class="border">
-      <input type="button" class='hidden' value="Sign Out" id="sign-out">
-    </form>
+      <button id="getGamesButton" class="btn btn-default">Get Games!</button>
+      <button id="clearGamesButton" class="btn btn-default">Clear Games!</button>
+      <form id="add-game">
+        <input required type="text" name="game[title]" placeholder="Game Title">
+        <input type="submit" value="Add Game">
+      </form>
+      <form id="update-game">
+        <input required type="number" name="game[id]" placeholder="ID of game to update">
+        <input required type="text" name="game[title]" placeholder="Updated Game Title">
+        <input type="submit" value="Update Game">
+      </form>
+      <form class="border">
+        <input type="button" class='hidden' value="Sign Out" id="sign-out">
+      </form>
+    </div>
   </div>
-</div>
 
 
   <div class="col-xs-12 hidden" id="sign-message"></div>
 
   <div class="handlebars">
-  <div id="content" class="content">
+    <div id="content" class="content">
+    </div>
   </div>
-  </div>
+</div>
 </body>
 
 </html>
